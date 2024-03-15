@@ -1,6 +1,11 @@
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
 
-use crate::TodoReq;
+#[derive(Clone, Deserialize)]
+pub struct TodoReq {
+    pub title: String,
+    pub text: String,
+    pub done: bool,
+}
 
 #[derive(Clone, Serialize)]
 pub struct Todo {
