@@ -1,6 +1,6 @@
 version: '3.9'
 
-sevices:
+services:
   db:
     image: postgres:16.2
     restart: always
@@ -9,4 +9,4 @@ sevices:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
-      - "5433:5432"
+      - "5432:5432"
